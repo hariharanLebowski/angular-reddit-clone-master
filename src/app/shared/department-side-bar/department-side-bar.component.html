@@ -1,0 +1,11 @@
+<div class="sidebar-view-department">
+    <div style="color: black; font-weight: bold">Browse Departments</div>
+    <hr />
+    <span *ngFor="let department of departments">
+        <span class="department-text"><a href="/view-department/{{department.id}}">{{department.name}}</a></span>
+        <hr />
+    </span>
+    <div style="text-align: center" *ngIf="displayViewAll">
+        <a style="font-weight: bold" routerLink="/list-departments">View All</a>
+    </div>
+</div>
